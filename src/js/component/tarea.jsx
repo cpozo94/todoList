@@ -26,7 +26,6 @@ const handleKey = (event) => {
   };
 
   const tareaHecha = ()=> {
-	
 	props.setTodoList(
 		props.todoList.filter(
 		  (item, currentIndex) => i == currentIndex
@@ -34,17 +33,16 @@ const handleKey = (event) => {
 	  )
 
   }
-
+//props.setTareaList.map((item,i)=>{ checkear esto aqui
 
 return (
 <div className="col">
 			<h1 className="title"> Hecho</h1>
 			<ul className="list-group">
-			{props.todoList.map((item,i) => {
-				//key sería el elemento único de cada lista, su identificador.
-				return <li className="list-group-item" key={i}  >{item}  </li>;
-                
-      })}       
+			
+			
+				 <li className="list-group-item"  > </li>
+                      
 			</ul>
 			<div className="items-left">
 			<p>{todoList.length} list done</p>

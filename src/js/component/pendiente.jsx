@@ -1,26 +1,33 @@
 import React, { useState } from "react";
 import propTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTasks, faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faTasks, faTrash, faCheck, faCheckSquare, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 
 
 
 const Pendiente = (props) => {
-  
+  const moveToTarea = (index) => {
+    const itemToMove = props.todoList[index];
+    props.setTareaList([...props.tareaList, itemToMove]);
+    props.setTodoList(props.todoList.filter((item, i) => i !== index));
+  };
 
   return (
     <div className="col">
       <h1 className="title"> Pendiente</h1>
       <ul className="list-group">
         {props.todoList.map((item, i) => {
-          //key sería el elemento único de cada lista, su identificador.
           return (
             <li className="list-group-item" key={i}>
-              {item} <FontAwesomeIcon icon={faCheck} onClick={() =>
-    tareaHecha(i)
-} />
-
+              {item}
+              <FontAwesomeIcon
+                icon={faCheck}
+                onClick={() => {
+                  moveToTarea(i);
+                  
+                }}
+              />
               <FontAwesomeIcon
                 icon={faTrash}
                 onClick={() =>
@@ -41,5 +48,6 @@ const Pendiente = (props) => {
     </div>
   );
 };
+
 
 export default Pendiente;

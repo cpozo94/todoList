@@ -24,3 +24,11 @@ p{
     text-align: center;
 }
 
+.list-group-item .fa-check{
+    float: left;
+  }
+  
+  .list-group-item .fa-trash {
+    float: right;
+  }
+  
