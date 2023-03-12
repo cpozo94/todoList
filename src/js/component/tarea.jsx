@@ -32,9 +32,9 @@ const Tarea = (props) => {
 		  {props.tareaList.map((item, index) => {
 			return <li className="list-group-item" key={index}>{item}
 			<FontAwesomeIcon
-                icon={faCheckSquare} id="square"
-                
-              /></li>;
+                icon={faCheckSquare} id="square"/>
+				<span id="hora">{new Date().toLocaleString("es-ES", { dateStyle: "short" })}</span>
+				</li>;
 		  })}
 		</ul>
 		<div className="items-left">
