@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nombre+de+la+fuente');
 
 body{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
 }
 
-
+*{
+    background-color: rgb(21, 145, 83);
+}
 
 
 
@@ -26,9 +29,18 @@ p{
 
 .list-group-item .fa-check{
     float: left;
+    background-color: white;
+    color: green;
+    
   }
   
   .list-group-item .fa-trash {
     float: right;
+    background-color: white;
+    color:red;
   }
-  
+#square {
+    float:right;
+}
+
+

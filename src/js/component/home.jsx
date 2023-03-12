@@ -9,6 +9,8 @@ import Pendiente from "./pendiente.jsx";
 
 
 const Home = () => {
+
+	//las tres variables que voy a utilizar, primero la tarea, despues la Lista
 	const [todo, setTodo] = useState("");
 	const [todoList, setTodoList] = useState([]);
 	const [tareaList, setTareaList] = useState([]);
@@ -29,7 +31,7 @@ const Home = () => {
 	  <div className="container text-center">
 		<div className="row">
 		  <div className="col">
-			<h1 className="title">Añade tarea</h1>
+			<h1 className="title">Add Task</h1>
 			<input
 			  className="form-control"
 			  type="text"

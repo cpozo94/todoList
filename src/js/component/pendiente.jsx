@@ -3,8 +3,8 @@ import propTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTasks, faTrash, faCheck, faCheckSquare, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-
-
+const fechaActual = new Date();
+  const fechaCompleta = fechaActual.toLocaleDateString();
 
 const Pendiente = (props) => {
   const moveToTarea = (index) => {
@@ -15,7 +15,7 @@ const Pendiente = (props) => {
 
   return (
     <div className="col">
-      <h1 className="title"> Pendiente</h1>
+      <h1 className="title"> Pending </h1>
       <ul className="list-group">
         {props.todoList.map((item, index) => {
           return (
@@ -42,11 +42,12 @@ const Pendiente = (props) => {
         })}
       </ul>
       <div className="items-left">
-        <p>{props.todoList.length} list done</p>
+        <p>{props.todoList.length} Pending Tasks</p>
       </div>
     </div>
   );
 };
+
 
 
 
