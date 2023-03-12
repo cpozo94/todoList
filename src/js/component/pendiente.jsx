@@ -17,15 +17,14 @@ const Pendiente = (props) => {
     <div className="col">
       <h1 className="title"> Pendiente</h1>
       <ul className="list-group">
-        {props.todoList.map((item, i) => {
+        {props.todoList.map((item, index) => {
           return (
-            <li className="list-group-item" key={i}>
+            <li className="list-group-item" key={index}>
               {item}
               <FontAwesomeIcon
                 icon={faCheck}
                 onClick={() => {
-                  moveToTarea(i);
-                  
+                  moveToTarea(index);
                 }}
               />
               <FontAwesomeIcon
@@ -33,7 +32,7 @@ const Pendiente = (props) => {
                 onClick={() =>
                   props.setTodoList(
                     props.todoList.filter(
-                      (item, currentIndex) => i !== currentIndex
+                      (item, currentIndex) => index !== currentIndex
                     )
                   )
                 }
@@ -48,6 +47,7 @@ const Pendiente = (props) => {
     </div>
   );
 };
+
 
 
 export default Pendiente;

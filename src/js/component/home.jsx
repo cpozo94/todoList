@@ -12,6 +12,7 @@ const Home = () => {
 	const [todo, setTodo] = useState("");
 	const [todoList, setTodoList] = useState([]);
 	const [tareaList, setTareaList] = useState([]);
+	
   
 	const Nuevo = (e) => {
 	  setTodo(e.target.value);
@@ -39,10 +40,11 @@ const Home = () => {
 			/>
 		  </div>
 		  <Pendiente
-			todoList={todoList}
-			setTodoList={setTodoList}
-			setTareaList={setTareaList}
-		  />
+          todoList={todoList}
+          setTodoList={setTodoList}
+          tareaList={tareaList}
+          setTareaList={setTareaList}
+        />
 		  <Tarea tareaList={tareaList} setTareaList={setTareaList} />
 		</div>
 	  </div>
